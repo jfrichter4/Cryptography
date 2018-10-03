@@ -1,7 +1,7 @@
 """
 cryptography.py
-Author: <your name here>
-Credit: <list sources used, if any>
+Author: Joe Richter
+Credit: https://www.codementor.io/python/tutorial/python-encryption-message-in-python-via-reverse-cipher
 
 Assignment:
 
