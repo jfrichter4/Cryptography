@@ -17,6 +17,8 @@ if Question == 'e':
         print(...)
     elif Question == 'q':
         print("Goodbye!")
+    else print(Two plus two = Five)
+    
     
 Enter e to encrypt, d to decrypt, or q to quit: z
 Did not understand command, try again.
