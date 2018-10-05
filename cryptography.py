@@ -11,19 +11,44 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 """
 import string
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
-Question = print(input("Enter e to encrypt, d to decrypt, or q to quit: "))
+straight = {}
+reverse = {}
+for j in range(0, len(associations)):
+    straight[associations[j]] = j
+    reverse[j] = associations[j]
+Question = str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
+if Question == "e":
+    enput = str(input("Message:"))
+    enkey = str(input("Key: "))
+    outputen = ""
+    listput = list(enput)
+    listkey = list(enkey)
+    j = 0
+    while len(enput) > len(enkey):
+        enkey += enkey[j]
+        j += 1
+    for o in range(0, len(enput)):
+        if straight[enput[o]] + straight[enkey[o]] <= len(associations):
+                outputen += reverse[straight[enput[o]]] + straight[enkey[o]]
+        else:
+            outputen += reverse[straight[enput[o]] + straight[enkey[o]] = (len(associations))
+    print(outputen)
+else:
+    print("meh?")
+    
+"""
 thing = associations.reverse()
 zipcryp = zip(associations, thing)
 if Question == 'e':
     enput = print(input("Message:"))
-    print(enput)
+    key = print(input("Key: "))
+    print(key)
 elif    Question == 'd':
     print("Message:")
 elif    Question == 'q':
     print("Goodbye!")
 else:
     print("Did not understand command, try again.")
-"""
 Enter e to encrypt, d to decrypt, or q to quit: z
 Did not understand command, try again.
 Enter e to encrypt, d to decrypt, or q to quit: e
