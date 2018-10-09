@@ -31,8 +31,7 @@ if Question == "e":
         if straight[enput[o]] + straight[enkey[o]] <= len(associations):
                 outputen += reverse[straight[enput[o]]] + straight[enkey[o]]
         else:
-            outputen += reverse[straight[enput[o]] + straight[enkey[o]] = (len(associations))
-    print(outputen)
+            print(outputen)
 else:
     print("meh?")
     
@@ -68,4 +67,18 @@ while  i >=  0 :
          translated = translated + message[i]      
          i  =  i  =  1     
 print(translated)
+
+import cryptography
+from cryptography.fernet import Fernet
+key = Fernet.generate_key()
+cipher_suite = Fernet(key)
+cipher_text = cipher_suite.encrypt(b"A really secret message. Not for prying eyes.")
+plain_text = cipher_suite.decrypt(cipher_text)
+import cryptography
+from cryptography.fernet import Fernet
+key = Fernet.generate_key()
+cipher_suite = Fernet(key)
+cipher_text = cipher_suite.encrypt(b"A really secret message. Not for prying eyes.")
+plain_text = cipher_suite.decrypt(cipher_text)
+btw: https://docs.python-guide.org/scenarios/crypto/
 """
